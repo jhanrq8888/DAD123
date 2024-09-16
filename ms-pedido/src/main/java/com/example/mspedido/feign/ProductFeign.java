@@ -12,10 +12,9 @@ import java.util.Optional;
 @FeignClient(name = "ms-catalogo-service", path = "/product")
 public interface ProductFeign {
     @GetMapping("/{id}")
-    @CircuitBreaker(name = "productListByIdCB", fallbackMethod = "productListById")
+    @CircuitBreaker(name = "productListByIdCB", fallbackMethod = "fallbackproductListById")
     public ResponseEntity<ProductDto> getById(@PathVariable Integer id);
-    default ResponseEntity<ProductDto> productListById(Integer id, Exception e) {
+    default ResponseEntity<ProductDto> fallbackproductListById(Integer id, Exception e) {
         return ResponseEntity.ok(new ProductDto());
     }
-
 }

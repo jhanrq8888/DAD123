@@ -7,9 +7,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/jhanrq8888/DAD123.git # ruta del repositorio git
+          uri: https://github.com/jhanrq8888/DAD123.git# ruta del repositorio git
           searchPaths: config-data
-          default-label: comunicacion
+          default-label: main
   security:
     user:
       name: root

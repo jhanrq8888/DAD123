@@ -21,6 +21,7 @@ springdoc:
   swagger-ui:
     enabled: true
     path: /doc/swagger-ui.html
+
 eureka:
   client:
     serviceUrl:
@@ -29,4 +30,3 @@ eureka:
   instance:
     #hostname: localhost
     instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-
