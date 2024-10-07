@@ -30,7 +30,7 @@ spring:
         - id: ms-pedido-service
           uri: lb://ms-pedido-service
           predicates:
-            - Path=/pedido/**
+            - Path=/order/**
           filters:
             - AuthFilter
         - id: ms-auth-service
