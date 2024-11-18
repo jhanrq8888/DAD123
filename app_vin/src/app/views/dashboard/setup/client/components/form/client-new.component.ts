@@ -45,23 +45,19 @@ import { MatInputModule } from '@angular/material/input';
             <form class="flex flex-col flex-auto p-6 sm:p-8 overflow-y-auto" [formGroup]="clientForm">
                 <mat-form-field>
                     <mat-label>Nombre</mat-label>
-                    <input matInput formControlName="nombre" />
+                    <input matInput formControlName="name" />
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Apellidos</mat-label>
-                    <input matInput formControlName="apellidos" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>DNI</mat-label>
-                    <input matInput formControlName="dni" />
-                </mat-form-field>
-                <mat-form-field>
-                    <mat-label>Telefono</mat-label>
-                    <input matInput formControlName="telefono" />
+                    <input matInput formControlName="lastname" />
                 </mat-form-field>
                 <mat-form-field>
                     <mat-label>Correo</mat-label>
-                    <input matInput formControlName="correo" />
+                    <input matInput formControlName="email" />
+                </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Telefono</mat-label>
+                    <input matInput formControlName="phone" />
                 </mat-form-field>
                 <!-- Actions -->
                 <div class="flex flex-col sm:flex-row sm:items-center justify-between mt-4 sm:mt-6">
@@ -80,11 +76,10 @@ export class ClientNewComponent implements OnInit {
     @Input() title: string = '';
     abcForms: any;
     clientForm = new FormGroup({
-        nombre: new FormControl('', [Validators.required]),
-        apellidos: new FormControl('', [Validators.required]),
-        dni: new FormControl('', [Validators.required]),
-        telefono: new FormControl('', [Validators.required]),
-        correo: new FormControl('', [Validators.required]),
+        name: new FormControl('', [Validators.required]),
+        lastname: new FormControl('', [Validators.required]),
+        email: new FormControl('', [Validators.required]),
+        phone: new FormControl('', [Validators.required]),
     });
 
     constructor(private _matDialog: MatDialogRef<ClientNewComponent>) {}

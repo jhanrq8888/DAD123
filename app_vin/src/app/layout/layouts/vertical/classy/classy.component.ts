@@ -154,7 +154,7 @@ export class ClassyLayoutComponent implements OnInit, OnDestroy {
                     },
                     {
                         id: 'SetupCategory',
-                        title: 'Setup Category',
+                        title: 'Setup Categoría',
                         type: 'basic',
                         icon: 'heroicons_outline:chart-pie',
                         link: '/homeScreen/setup/category',

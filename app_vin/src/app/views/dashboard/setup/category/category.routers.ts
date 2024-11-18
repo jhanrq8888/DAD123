@@ -12,7 +12,7 @@ export default [
         path: '',
         component: CategoryContainerComponent,
         data: {
-          title: 'Clientes'
+          title: 'Categoría'
         }
       },
     ],

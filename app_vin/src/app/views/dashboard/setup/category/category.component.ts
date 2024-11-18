@@ -3,7 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { abcForms } from '../../../../../environments/generals';
 import { Component, OnInit } from '@angular/core';
 @Component({
-    selector: 'app-category',
+    selector: 'app-setup',
     standalone: true,
     imports: [CommonModule, RouterOutlet],
     template: `
@@ -23,7 +23,7 @@ export class CategoryComponent implements OnInit {
     abcForms: any;
     constructor() {}
     ngOnInit() {
-        this.title = 'category';
+        this.title = 'Categoría';
         this.abcForms = abcForms;
     }
 }

@@ -62,7 +62,7 @@ export class ClientContainerComponent implements OnInit {
     public eventNew($event: boolean): void {
         if ($event) {
             const clienteForm = this._matDialog.open(ClientNewComponent);
-            clienteForm.componentInstance.title = 'Nuevo Category' || null;
+            clienteForm.componentInstance.title = 'Nueva Categoría' || null;
             clienteForm.afterClosed().subscribe((result: any) => {
                 if (result) {
                     this.saveClient(result);
@@ -93,7 +93,7 @@ export class ClientContainerComponent implements OnInit {
         console.log(data);
         if (data) {
             const clienteForm = this._matDialog.open(ClientEditComponent);
-            clienteForm.componentInstance.title =`Editar <b>${data.nombre||data.id} </b>`;
+            clienteForm.componentInstance.title =`Editar <b>${data.name||data.id} </b>`;
             clienteForm.componentInstance.client = data;
             clienteForm.afterClosed().subscribe((result: any) => {
                 if (result) {
