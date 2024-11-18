@@ -80,7 +80,6 @@ export class ClientNewComponent implements OnInit {
     @Input() title: string = '';
     abcForms: any;
     clientForm = new FormGroup({
-
         nombre: new FormControl('', [Validators.required]),
         apellidos: new FormControl('', [Validators.required]),
         dni: new FormControl('', [Validators.required]),

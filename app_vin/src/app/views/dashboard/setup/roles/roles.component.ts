@@ -10,7 +10,7 @@
 //     </div>
 //   `,
 // })
-// export class ClientComponent implements OnInit {
+// export class CategoryComponent implements OnInit {
 //
 //   public title: string = '';
 //   abcForms:any;
